@@ -171,9 +171,13 @@ export default {
   color: blue;
   margin: 10px;
 }
+header {
+  background-color: transparent;
+}
 img {
   position: absolute;
-  z-index: -1;
   bottom: 0;
+  z-index: -1;
+  width: 100%;
 }
 </style>

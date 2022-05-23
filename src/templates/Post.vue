@@ -82,12 +82,13 @@ export default {
 .post-meta > a {
   color: aqua;
 }
-.masthead {
+header {
   background-color: transparent;
 }
 img {
   position: absolute;
   bottom: 0;
   z-index: -1;
+  width: 100%;
 }
 </style>
