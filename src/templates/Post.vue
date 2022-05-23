@@ -2,14 +2,10 @@
   <Layout>
     <!-- Page Header-->
     <!-- <header class="masthead" style="background-image: url('/img/post-bg.jpg')"> -->
-    <header
-      class="masthead"
-      :style="{
-        backgroundImage: $page.post.cover
-          ? `${$page.post.cover.url}`
-          : '/img/post-bg.jpg',
-      }"
-    >
+    <header class="masthead">
+      <img
+        :src="$page.post.cover ? $page.post.cover.url : '/img/post-bg.jpg'"
+      />
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
@@ -85,5 +81,13 @@ export default {
 <style scoped>
 .post-meta > a {
   color: aqua;
+}
+.masthead {
+  background-color: transparent;
+}
+img {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
 }
 </style>

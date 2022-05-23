@@ -1,14 +1,8 @@
 <template>
   <Layout>
     <!-- Page Header-->
-    <header
-      class="masthead"
-      :style="{
-        backgroundImage: general.cover
-          ? `${general.cover.url}`
-          : '/img/home-bg.jpg',
-      }"
-    >
+    <header class="masthead">
+      <img :src="general.cover ? general.cover.url : '/img/home-bg.jpg'" />
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
@@ -176,5 +170,10 @@ export default {
 .pager {
   color: blue;
   margin: 10px;
+}
+img {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
 }
 </style>
