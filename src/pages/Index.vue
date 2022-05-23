@@ -5,9 +5,7 @@
       class="masthead"
       :style="{
         backgroundImage: `url(${
-          general.cover
-            ? `${GRIDSOME_API_URL + general.cover.url}`
-            : '/img/home-bg.jpg'
+          general.cover ? `${general.cover.url}` : '/img/home-bg.jpg'
         })`,
       }"
     >

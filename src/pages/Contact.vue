@@ -135,7 +135,7 @@ export default {
       try {
         const { data } = await axios({
           method: 'POST',
-          url: GRIDSOME_API_URL + '/contacts',
+          url: '/contacts',
           data: this.form,
         })
         console.log('提交成功', data)

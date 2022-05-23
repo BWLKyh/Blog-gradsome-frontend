@@ -6,9 +6,7 @@
       class="masthead"
       :style="{
         backgroundImage: `url(${
-          $page.post.cover
-            ? `${GRIDSOME_API_URL + $page.post.cover.url}`
-            : '/img/post-bg.jpg'
+          $page.post.cover ? `${$page.post.cover.url}` : '/img/post-bg.jpg'
         })`,
       }"
     >
