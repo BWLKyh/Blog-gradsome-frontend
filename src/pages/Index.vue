@@ -4,9 +4,9 @@
     <header
       class="masthead"
       :style="{
-        backgroundImage: `url(${
-          general.cover ? `${general.cover.url}` : '/img/home-bg.jpg'
-        })`,
+        backgroundImage: general.cover
+          ? `${general.cover.url}`
+          : '/img/home-bg.jpg',
       }"
     >
       <div class="container position-relative px-4 px-lg-5">

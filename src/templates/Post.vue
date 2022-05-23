@@ -5,9 +5,9 @@
     <header
       class="masthead"
       :style="{
-        backgroundImage: `url(${
-          $page.post.cover ? `${$page.post.cover.url}` : '/img/post-bg.jpg'
-        })`,
+        backgroundImage: $page.post.cover
+          ? `${$page.post.cover.url}`
+          : '/img/post-bg.jpg',
       }"
     >
       <div class="container position-relative px-4 px-lg-5">
