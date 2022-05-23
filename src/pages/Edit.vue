@@ -137,7 +137,8 @@
 
 <script>
 import { addPost } from '/api/post'
-const user = JSON.parse(localStorage.getItem('blog-user')) || {}
+const user =
+  (localStorage && JSON.parse(localStorage.getItem('blog-user'))) || {}
 
 export default {
   name: 'ContactPage',
@@ -162,7 +163,7 @@ export default {
   },
   computed: {
     logged() {
-      return !!localStorage.getItem('blog-token')
+      return localStorage && localStorage.getItem('blog-token')
     },
   },
   methods: {
