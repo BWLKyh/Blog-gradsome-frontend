@@ -153,15 +153,18 @@ export default {
         tags: [],
         cover: {},
         content: '',
-        createdby: user.username,
-        updatedby: user.username,
+        createdby: '',
+        updatedby: '',
       },
       tag: '',
       logged: false,
     }
   },
   mounted() {
+    const user = JSON.parse(window.localStorage.getItem('blog-user')) || {}
     this.logged = !!localStorage.getItem('blog-token')
+    this.createdby = user.username
+    this.updatedby = user.username
   },
   methods: {
     onAddTag(tag) {
