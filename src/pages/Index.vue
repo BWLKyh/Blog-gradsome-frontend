@@ -162,6 +162,7 @@ export default {
   name: 'HomePage',
   metaInfo: {
     title: 'Hello, world!',
+    content: 'no-referrer',
   },
   components: {
     Pager,
