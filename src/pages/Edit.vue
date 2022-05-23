@@ -137,8 +137,6 @@
 
 <script>
 import { addPost } from '/api/post'
-const user =
-  (window && JSON.parse(window.localStorage.getItem('blog-user'))) || {}
 
 export default {
   name: 'ContactPage',
@@ -159,12 +157,11 @@ export default {
         updatedby: user.username,
       },
       tag: '',
+      logged: false,
     }
   },
-  computed: {
-    logged() {
-      return window && window.localStorage.getItem('blog-token')
-    },
+  mounted() {
+    this.logged = !!localStorage.getItem('blog-token')
   },
   methods: {
     onAddTag(tag) {
