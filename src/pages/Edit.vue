@@ -179,7 +179,6 @@ export default {
     async onSubmit() {
       try {
         const { data } = await addPost(this.form)
-        console.log('提交成功', data)
         window.alert('提交成功!')
       } catch (error) {
         console.dir(error)
